@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 import { Greet } from './components/Greet'
 import { Person } from './components/Person'
@@ -11,8 +10,12 @@ import { Button } from './components/Button'
 import { Input } from './components/Input'
 import { Container } from './components/Container'
 import { LogedIn } from './components/state/LogedIn'
-import { User } from './components/state/User'
+// import { User } from './components/state/User'
 import { Counter } from './components/state/Counter'
+import { ThemeContextProvider } from './components/context/ThemeContext'
+import { Box } from './components/context/Box'
+import { UserContextProvider } from './components/context/UserContext'
+import { User } from './components/context/User'
 
 function App() {
 	const person = {
@@ -30,7 +33,7 @@ function App() {
 		<div className="App">
 			<Heading>logo logo</Heading>
 			<LogedIn></LogedIn>
-			<User></User>
+			{/* <User></User> */}
 			<Counter></Counter>
 
 			<Greet name="Dejan" isLogedIn={true}></Greet>
@@ -57,6 +60,13 @@ function App() {
 					padding: '1rem'
 				}}
 			></Container>
+
+			<ThemeContextProvider>
+				<Box></Box>
+			</ThemeContextProvider>
+			<UserContextProvider>
+				<User></User>
+			</UserContextProvider>
 		</div>
 	)
 }
