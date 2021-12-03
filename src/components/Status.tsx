@@ -1,6 +1,3 @@
-import { render } from '@testing-library/react'
-import { isPropertySignature } from 'typescript'
-
 type StatusProps = {
 	status: 'success' | 'loading' | 'error'
 }
