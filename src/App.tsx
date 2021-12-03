@@ -1,26 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { Greet } from './components/Greet'
+import { Person } from './components/Person'
+import { PersonList } from './components/PersonList'
+import { Status } from './components/Status'
+import { Heading } from './components/Heading'
+import { Oscar } from './components/Oscar'
+import { Button } from './components/Button'
+import { Input } from './components/Input'
+import { Container } from './components/Container'
+import { LogedIn } from './components/state/LogedIn'
+import { User } from './components/state/User'
+import { Counter } from './components/state/Counter'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const person = {
+		first: 'Dejan',
+		last: 'Vjestica'
+	}
+
+	const listOfPersons = [
+		{ first: 'Dejan', last: 'Vjestica' },
+		{ first: 'Zsofi', last: 'Oroszi' },
+		{ first: 'Marko', last: 'Vjestica' }
+	]
+
+	return (
+		<div className="App">
+			<Heading>logo logo</Heading>
+			<LogedIn></LogedIn>
+			<User></User>
+			<Counter></Counter>
+
+			<Greet name="Dejan" isLogedIn={true}></Greet>
+			<Person name={person}></Person>
+			<PersonList names={listOfPersons}></PersonList>
+			<Status status={'success'}></Status>
+			<Oscar>
+				<Heading>Oscar gors to Leo</Heading>
+			</Oscar>
+			<Button
+				handleClick={(event, id = 2) => {
+					console.log('click', event)
+				}}
+			></Button>
+			<Input
+				value=""
+				handleChange={(event) => {
+					console.log(event)
+				}}
+			></Input>
+			<Container
+				styles={{
+					border: 'solid 1px red',
+					padding: '1rem'
+				}}
+			></Container>
+		</div>
+	)
 }
 
-export default App;
+export default App
