@@ -16,6 +16,7 @@ import { ThemeContextProvider } from './components/context/ThemeContext'
 import { Box } from './components/context/Box'
 import { UserContextProvider } from './components/context/UserContext'
 import { User } from './components/context/User'
+import { CounterClss } from './components/class/Counter'
 
 function App() {
 	const person = {
@@ -67,6 +68,7 @@ function App() {
 			<UserContextProvider>
 				<User></User>
 			</UserContextProvider>
+			<CounterClss message="HAllo there"></CounterClss>
 		</div>
 	)
 }
