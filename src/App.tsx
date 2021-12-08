@@ -17,6 +17,8 @@ import { Box } from './components/context/Box'
 import { UserContextProvider } from './components/context/UserContext'
 import { User } from './components/context/User'
 import { CounterClss } from './components/class/Counter'
+import { Private } from './components/auth/Private'
+import { Profile } from './components/auth/Profile'
 
 function App() {
 	const person = {
@@ -69,6 +71,7 @@ function App() {
 				<User></User>
 			</UserContextProvider>
 			<CounterClss message="HAllo there"></CounterClss>
+			<Private isLogedIn={false} component={Profile} />
 		</div>
 	)
 }
