@@ -19,6 +19,7 @@ import { User } from './components/context/User'
 import { CounterClss } from './components/class/Counter'
 import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
+import { List } from './components/generics/List'
 
 function App() {
 	const person = {
@@ -72,6 +73,10 @@ function App() {
 			</UserContextProvider>
 			<CounterClss message="HAllo there"></CounterClss>
 			<Private isLogedIn={false} component={Profile} />
+			<List
+				items={['batman', 'superman', 'ironman', 3, false]}
+				onClick={(item) => console.log(item)}
+			></List>
 		</div>
 	)
 }
