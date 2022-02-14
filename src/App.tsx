@@ -20,6 +20,7 @@ import { CounterClss } from './components/class/Counter'
 import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
 import { List } from './components/generics/List'
+import { RandomNumber } from './components/restriction/RandomNumber'
 
 function App() {
 	const person = {
@@ -77,6 +78,7 @@ function App() {
 				items={['batman', 'superman', 'ironman', 3, false]}
 				onClick={(item) => console.log(item)}
 			></List>
+			<RandomNumber value={13} isPositive />
 		</div>
 	)
 }
