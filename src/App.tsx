@@ -22,6 +22,8 @@ import { Profile } from './components/auth/Profile'
 import { List } from './components/generics/List'
 import { RandomNumber } from './components/restriction/RandomNumber'
 import { Toast } from './components/templateLiterals/Toast'
+import { CustomButtom } from './components/html/CustomButtom'
+import { CustomInput } from './components/html/CustomInput'
 
 function App() {
 	const person = {
@@ -81,6 +83,13 @@ function App() {
 			></List>
 			<RandomNumber value={13} isPositive />
 			<Toast position="center" />
+			<CustomButtom
+				variant="primary"
+				onClick={() => console.log('clicked')}
+			>
+				Hallo
+			</CustomButtom>
+			<CustomInput type="text" name="dejan"></CustomInput>
 		</div>
 	)
 }
