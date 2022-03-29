@@ -24,6 +24,7 @@ import { RandomNumber } from './components/restriction/RandomNumber'
 import { Toast } from './components/templateLiterals/Toast'
 import { CustomButtom } from './components/html/CustomButtom'
 import { CustomInput } from './components/html/CustomInput'
+import { Text } from './components/polymorphic/Text'
 
 function App() {
 	const person = {
@@ -90,6 +91,15 @@ function App() {
 				Hallo
 			</CustomButtom>
 			<CustomInput type="text" name="dejan"></CustomInput>
+			<Text as="a" href="hallo" size="lg">
+				Hallo
+			</Text>
+			<Text as="label" htmlFor="someId" size="sm">
+				Hallo1
+			</Text>
+			<Text as="h2" size="md">
+				Hallo2
+			</Text>
 		</div>
 	)
 }
